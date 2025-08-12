@@ -1,0 +1,103 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .skill-node {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-node::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .skill-node:hover::before {
+            opacity: 1;
+        }
+        
+        .skill-node:hover {
+            transform: translateY(-5px);
+            filter: drop-shadow(0 0 10px currentColor);
+        }
+        
+        .connector-line {
+            position: absolute;
+            height: 2px;
+            background: white;
+            transform-origin: left center;
+            box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.5);
+            z-index: -1;
+        }
+        
+        .connector-line::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            box-shadow: 0 0 15px 3px rgba(255, 255, 255, 0.9);
+            transition: all 0.3s ease;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+            animation: float 15s infinite linear;
+        }
+        
+        .skills-container {
+  transform-origin: center center;
+  overflow: visible !important;
+}
+.connector-line {
+  overflow: visible !important;
+}
+
+/* Always keep same layout — just shrink on smaller screens */
+.skills-container {
+  transform-origin: center center;
+}
+
+/* Large desktop: full size */
+@media (min-width: 1024px) {
+  .skills-container {
+    transform: scale(1);
+  }
+}
+
+/* Tablet: slightly smaller */
+@media (max-width: 1023px) and (min-width: 640px) {
+  .skills-container {
+    transform: scale(0.85);
+  }
+}
+
+/* Mobile: much smaller but same placement */
+@media (max-width: 639px) {
+  .skills-container {
+    transform: scale(0.7);
+  }
+}

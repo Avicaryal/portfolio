@@ -1,0 +1,107 @@
+ @keyframes gradientCycle {
+            0% { color: #00bfff; }
+            50% { color: #8a2be2; }
+            100% { color: #00bfff; }
+        }
+        
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px rgba(0, 191, 255, 0.7); }
+            50% { text-shadow: 0 0 10px rgba(138, 43, 226, 0.7); }
+            100% { text-shadow: 0 0 10px rgba(0, 191, 255, 0.7); }
+        }
+        
+        @keyframes tilt {
+            0% { transform: perspective(1000px) rotateX(0deg) rotateY(0deg); }
+            50% { transform: perspective(1000px) rotateX(2deg) rotateY(2deg); }
+            100% { transform: perspective(1000px) rotateX(0deg) rotateY(0deg); }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 191, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 191, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 191, 255, 0); }
+        }
+        
+        .gradient-text {
+            animation: gradientCycle 8s infinite, glow 8s infinite;
+        }
+        
+        .glass-container {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-container:hover {
+            animation: tilt 5s ease-in-out infinite;
+        }
+        
+        .input-field {
+            background: rgba(15, 23, 42, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #00bfff;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+        }
+        
+        .neon-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+        }
+        
+        .neon-button:hover {
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        .neon-button:active {
+            animation: pulse 0.5s;
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .globe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+        
+        .nepal-label {
+            position: absolute;
+            color: white;
+            background: rgba(0, 191, 255, 0.7);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .glass-container:hover {
+                animation: none;
+            }
+        }

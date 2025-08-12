@@ -1,0 +1,336 @@
+/* ================================
+   responsive-overrides.css
+   Mobile-first responsive utility & component rules
+   Put this file AFTER your main css
+   ================================ */
+
+/* ---------- Reset & Box sizing ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins for common elements */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth fonts & accessible text rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px; /* base size for rem calculations */
+}
+
+/* ---------- Base layout helpers ---------- */
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* Center helper */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Utility */
+.hide { display: none !important; }
+.show { display: block !important; }
+
+/* Spacing utilities (useful for quick fixes) */
+.mt-8 { margin-top: 0.5rem; }
+.mt-16 { margin-top: 1rem; }
+.mt-24 { margin-top: 1.5rem; }
+.mb-8 { margin-bottom: 0.5rem; }
+
+/* ---------- Typography ---------- */
+h1 { font-size: 1.6rem; line-height: 1.1; font-weight: 700; }
+h2 { font-size: 1.25rem; line-height: 1.2; font-weight: 600; }
+p  { font-size: 0.95rem; color: #dcdcdc; line-height: 1.5; }
+
+/* Make headings scale on larger screens in media queries below */
+
+/* ---------- Header / Nav ---------- */
+.header {
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 1rem;
+  position: relative;
+  z-index: 50;
+}
+
+/* Logo */
+.header .logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+}
+
+/* Nav links - mobile stacked, will change on larger screens */
+.header nav {
+  display: none; /* hidden on smallest */
+}
+
+/* Mobile menu toggle (if exists) keep visible */
+.header .menu-toggle {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Hero Section ---------- */
+/* Basic layout: stacked (text above image) on small screens */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 2rem 0;
+  align-items: center;
+}
+
+.hero .hero-content {
+  order: 1;
+}
+
+.hero .hero-media {
+  order: 2;
+  width: 100%;
+}
+
+.hero .hero-media img,
+.hero .hero-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* CTA button */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- Stats boxes (flex row on mobile) ---------- */
+.stats {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.stat-box {
+  background: rgba(255,255,255,0.03);
+  padding: 12px;
+  border-radius: 10px;
+  flex: 1 1 calc(33.333% - 0.75rem);
+  min-width: 120px;
+  text-align: center;
+}
+
+/* ---------- Portfolio / Grid ---------- */
+/* Mobile-first: single column cards */
+.portfolio-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+/* Card basics */
+.card {
+  background: rgba(255,255,255,0.03);
+  padding: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.card img,
+.card video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.card h3 { margin-top: 8px; font-size: 1rem; }
+
+/* ---------- Forms ---------- */
+.form-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
+  color: inherit;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  background: transparent;
+}
+
+/* =========================
+   Media queries — Desktop-first tweaks
+   Use breakpoints: 480 (small), 768 (tablet), 1024 (desktop)
+   ========================= */
+
+/* Small phones landscape & larger (min-width: 480px) */
+@media (min-width: 480px) {
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.2rem; }
+
+  .hero { gap: 1.5rem; }
+  .stats { gap: 1rem; }
+}
+
+/* Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  html { font-size: 16px; }
+
+  /* Header nav becomes visible */
+  .header nav {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .header .menu-toggle { display: none; }
+
+  /* Hero: 2 columns (text left, media right) */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .hero .hero-content { order: 1; padding-right: 1rem; }
+  .hero .hero-media { order: 2; padding-left: 1rem; }
+
+  /* Portfolio grid: 2 or 3 columns depending container class (we provide helper classes below) */
+  .portfolio-grid.columns-2 { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid.columns-3 { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid.columns-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .stat-box { flex: 1 1 auto; }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  html { font-size: 17px; }
+
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 1.6rem; }
+
+  .container { max-width: 1300px; }
+
+  /* Hero: wider gap */
+  .hero { gap: 2rem; padding: 3rem 0; }
+
+  /* Portfolio grid column helpers default for desktop */
+  .portfolio-grid.columns-2 { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid.columns-3 { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid.columns-4 { grid-template-columns: repeat(4, 1fr); }
+
+  /* Card hover lift */
+  .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.45); }
+}
+
+/* ---------- Specific fixes for portfolio requirements ----------
+   You said: All -> min 3 per row; Thumbnail -> 2 per row;
+   Intro -> 2 per row; Social -> 4 per row
+   We'll provide classes you can toggle on the grid:
+   - .portfolio-grid--all
+   - .portfolio-grid--thumbnail
+   - .portfolio-grid--intro
+   - .portfolio-grid--social
+   Use these classes on the wrapping .portfolio-grid element.
+   ---------- */
+
+/* Default mobile: single column */
+.portfolio-grid--all { grid-template-columns: 1fr; }
+.portfolio-grid--thumbnail { grid-template-columns: 1fr; }
+.portfolio-grid--intro { grid-template-columns: 1fr; }
+.portfolio-grid--social { grid-template-columns: 1fr; }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .portfolio-grid--all { grid-template-columns: repeat(3, 1fr); }         /* 3 per row */
+  .portfolio-grid--thumbnail { grid-template-columns: repeat(2, 1fr); }   /* 2 per row */
+  .portfolio-grid--intro { grid-template-columns: repeat(2, 1fr); }       /* 2 per row */
+  .portfolio-grid--social { grid-template-columns: repeat(4, 1fr); }      /* 4 per row */
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .portfolio-grid--all { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-grid--thumbnail { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid--intro { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid--social { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Utility: make images responsive when inside specific aspect ratio boxes ---------- */
+.aspect-16-9 { position: relative; padding-top: 56.25%; overflow: hidden; border-radius: 8px; }
+.aspect-1-1  { position: relative; padding-top: 100%; overflow: hidden; border-radius: 8px; }
+.aspect-4-5  { position: relative; padding-top: 125%; overflow: hidden; border-radius: 8px; }
+
+.aspect-16-9 img,
+.aspect-1-1 img,
+.aspect-4-5 img {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+}
+
+/* ---------- Accessibility & touch targets ---------- */
+button, .btn {
+  tap-highlight-color: transparent;
+}
+button, a, .btn {
+  -webkit-tap-highlight-color: rgba(255,255,255,0.05);
+}
+
+/* Increase hit area on small screens */
+@media (max-width: 479px) {
+  .filter-buttons button, .btn {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- Notes for integration ----------
+1) On your portfolio grid wrapper element add one of these classes:
+   - <div class="portfolio-grid portfolio-grid--all"> for All view
+   - <div class="portfolio-grid portfolio-grid--thumbnail"> for thumbnails
+   - <div class="portfolio-grid portfolio-grid--intro"> for intro videos
+   - <div class="portfolio-grid portfolio-grid--social"> for social posts
+
+2) For card image aspect control:
+   - Wrap image in <div class="aspect-16-9"><img src="..."></div> for 16:9
+   - Use aspect-1-1 for square logos/social
+   - Use aspect-4-5 for tall social posts / posters
+
+3) If some styles still conflict, increase specificity or add `!important` on a problematic rule
+   (but use sparingly).
+
+4) If you want, upload your HTML files or a ZIP again and I will apply this file directly into your markup.
+   ---------- */

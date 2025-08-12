@@ -1,0 +1,24 @@
+    body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .banner h2 span {
+            color: #00b7ff; /* typing text color */
+        }
+
+        /* Optional blinking cursor */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background: #00aaff;
+            animation: blink 0.7s infinite;
+            margin-left: 3px;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }

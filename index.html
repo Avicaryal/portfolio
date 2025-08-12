@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Homepage</title>
+    <script src="https://kit.fontawesome.com/c3b56a7551.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_queries.css">
+    <link rel="stylesheet" href="animation.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="work.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="tool.js"></script>
+    <link rel="stylesheet" href="tool.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="button.css">
+    <script src="text_animation.js"></script>
+    <link rel="stylesheet" href="text_animation.css">
+    <link rel="stylesheet" href="more_design.css">
+    <script src="sound.js"></script>
+    <link rel="stylesheet" href="about_me.css">
+
+    <!--this is for abbout me -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="javascript/about_me.js"></script>
+    <!--this is for skill section -->
+    <script src="javascript/skill.js"></script>
+    <link rel="stylesheet" href="skill.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--this is you need a designer page section -->
+    <link rel="stylesheet" href="do_you_need_designers.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="javascript/do_you_designer.js"></script>
+    <!--this is for cursor animatoin -->
+    <link rel="stylesheet" href="cursor/cursor.css">
+    <script src="cursor/cursor.js"></script>
+    <!--this is contact us section -->
+    <link rel="stylesheet" href="footer/contact.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.24.0/dist/globe.gl.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="footer/contact.js"></script>
+
+    <!--this is for flyer design -->
+
+    <link rel="stylesheet" href="flyer.css">
+    <script src="flyer.js"></script>
+
+    <!--responsive-->
+    <link rel="stylesheet" href="responssive.css">
+    <link rel="stylesheet" href="responsives.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #020124 0%, #13183a 50%, #1a2252 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .service-card {
+            background: rgba(18, 22, 55, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(64, 224, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 32px rgba(0, 10, 30, 0.2);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 150, 255, 0.15);
+            border-color: rgba(64, 224, 255, 0.5);
+            background: linear-gradient(135deg, rgba(18, 22, 55, 0.8) 0%, rgba(35, 42, 100, 0.8) 100%);
+        }
+
+        .service-card:nth-child(1):hover {
+            background: linear-gradient(135deg, rgba(18, 22, 55, 0.8) 0%, rgba(64, 100, 224, 0.8) 100%);
+        }
+
+        .service-card:nth-child(2):hover {
+            background: linear-gradient(135deg, rgba(18, 22, 55, 0.8) 0%, rgba(100, 64, 224, 0.8) 100%);
+        }
+
+        .service-card:nth-child(3):hover {
+            background: linear-gradient(135deg, rgba(18, 22, 55, 0.8) 0%, rgba(224, 64, 178, 0.8) 100%);
+        }
+
+        .service-card:nth-child(4):hover {
+            background: linear-gradient(135deg, rgba(18, 22, 55, 0.8) 0%, rgba(64, 224, 208, 0.8) 100%);
+        }
+
+        .bg-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(64, 224, 255, 0.15) 1px, transparent 1px);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+
+        .glow {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 100.75;
+            z-index: -1;
+        }
+
+        .glow-1 {
+            background: #40e0ff;
+            top: 10%;
+            left: 10%;
+        }
+
+        .glow-2 {
+            background: #7b64ff;
+            bottom: 10%;
+            right: 10%;
+        }
+
+        .service-icon {
+            color: #40e0ff;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        .feature-item {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .feature-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(64, 224, 255, 0.7);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <ul id="header-nav-bar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about_me">About Me</a></li>
+                <li><a href="#service">service</a></li>
+                <li><a href="#works">works</a></li>
+                <li><a href="#designs">Designs</a></li>
+                <li><a href="#contact_me">Contact Me</a></li>
+            </ul>
+            <div class="small_screen" id="nav_burger">
+                <span id="nav_burger_icon"><i class="fa-solid fa-bars fa-xl"></i></span>
+                <span id="nav_exit_icon"><i class="fa-solid fa-x fa-xl"></i></span>
+            </div>
+            <div class="small_screen" id="mobile_nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about_me">About Me</a></li>
+                    <li><a href="#service">service</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#designs">Designs</a></li>
+                    <li><a href="#contact_me">Contact Me</a></li>
+                </ul>
+
+                <footer id="nav_footer">
+                    <div class="footer_container">
+                        <div class="footer_element">
+                            <h4>Get in touch</h4>
+                            <span>aryalavih@gmail.com</span>
+                        </div>
+                        <div class="footer_element">
+                            <h4>Social</h4>
+                            <span><a href="https://www.facebook.com/avi.a.chhetri.11"><i
+                                        class="fa-brands fa-facebook"></i> Facebook</a></span>
+                            <span><a href="https://www.instagram.com/avidesign111/"><i
+                                        class="fa-brands fa-instagram"></i> Instagram</a></span>
+                            <span><a href="https://www.linkedin.com/in/aviaryal111/"><i class="fa-brands fa-linkedin"></i> Linkedin</a></span>
+                        </div>
+                        <div class="footer_element">
+                            <h4>Location</h4>
+                            <span>Tilottama 03, Shankharnagar, Rupandekhi,Nepal</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </nav>
+        <div clas="main_container reveal" id="home">
+            <div class="banner">
+                <h1>Hi👋, i am<br><span>Avi Aryal</span></h1>
+                <h2>As a <span id="typing"></span><span class="cursor"></span></h2><br>
+                <!--special button join use-->
+                <button class="button">
+                    <div class="dots_border"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
+                        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+                            d="M14.187 8.096L15 5.25L15.813 8.096C16.0231 8.83114 16.4171 9.50062 16.9577 10.0413C17.4984 10.5819 18.1679 10.9759 18.903 11.186L21.75 12L18.904 12.813C18.1689 13.0231 17.4994 13.4171 16.9587 13.9577C16.4181 14.4984 16.0241 15.1679 15.814 15.903L15 18.75L14.187 15.904C13.9769 15.1689 13.5829 14.4994 13.0423 13.9587C12.5016 13.4181 11.8321 13.0241 11.097 12.814L8.25 12L11.096 11.187C11.8311 10.9769 12.5006 10.5829 13.0413 10.0423C13.5819 9.50162 13.9759 8.83214 14.186 8.097L14.187 8.096Z">
+                        </path>
+                        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+                            d="M6 14.25L5.741 15.285C5.59267 15.8785 5.28579 16.4206 4.85319 16.8532C4.42059 17.2858 3.87853 17.5927 3.285 17.741L2.25 18L3.285 18.259C3.87853 18.4073 4.42059 18.7142 4.85319 19.1468C5.28579 19.5794 5.59267 20.1215 5.741 20.715L6 21.75L6.259 20.715C6.40725 20.1216 6.71398 19.5796 7.14639 19.147C7.5788 18.7144 8.12065 18.4075 8.714 18.259L9.75 18L8.714 17.741C8.12065 17.5925 7.5788 17.2856 7.14639 16.853C6.71398 16.4204 6.40725 15.8784 6.259 15.285L6 14.25Z">
+                        </path>
+                        <path class="path" stroke-linejoin="round" stroke-linecap="round" stroke="black" fill="black"
+                            d="M6.5 4L6.303 4.5915C6.24777 4.75718 6.15472 4.90774 6.03123 5.03123C5.90774 5.15472 5.75718 5.24777 5.5915 5.303L5 5.5L5.5915 5.697C5.75718 5.75223 5.90774 5.84528 6.03123 5.96877C6.15472 6.09226 6.24777 6.24282 6.303 6.4085L6.5 7L6.697 6.4085C6.75223 6.24282 6.84528 6.09226 6.96877 5.96877C7.09226 5.84528 7.24282 5.75223 7.4085 5.697L8 5.5L7.4085 5.303C7.24282 5.24777 7.09226 5.15472 6.96877 5.03123C6.84528 4.90774 6.75223 4.75718 6.697 4.5915L6.5 4Z">
+                        </path>
+                    </svg>
+                    <span class="text_button">Explore more</span>
+                </button><br>
+
+                <!--another home buttton-->
+
+                <button class="button">
+                    <div class="dots_border"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="sparkle">
+
+                    </svg>
+                    <span class="text_button"><span>📄</span>CV Resume</span></br>
+                </button>
+
+                <!--button end here -->
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!--this is a start about me-->
+    <div class="main_container reveal" id="about_me"></div>
+
+    <div class="min-h-screen flex items-center justify-center p-4 md:p-8">
+        <!-- Background particles -->
+        <div id="particles"></div>
+
+        <!-- Main container -->
+        <div class="w-full max-w-6xl mx-auto glass-card rounded-2xl p-6 md:p-10 relative overflow-hidden">
+            <!-- Gradient overlay -->
+            <div class="absolute inset-0 rounded-2xl overflow-hidden">
+                <div class="absolute w-80 h-80 rounded-full bg-purple-500 opacity-10 -top-40 -left-40"></div>
+                <div class="absolute w-96 h-96 rounded-full bg-blue-500 opacity-10 -bottom-40 -right-40"></div>
+            </div>
+
+            <div class="relative z-10">
+                <!-- Content layout -->
+                <div class="flex flex-col lg:flex-row items-center gap-10">
+                    <!-- Avatar section -->
+                    <div class="w-full lg:w-1/3 flex justify-center">
+                        <div class="relative floating">
+                            <div class="glow-border w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden">
+                                <img src="image/avi.png" alt="Profile" class="w-full h-full object-cover">
+                            </div>
+                            <div class="absolute -bottom-5 left-1/2 transform -translate-x-1/2">
+                                <div class="glass-button px-6 py-2 rounded-full">
+                                    <span class="text-sm md:text-base">Graphics Designer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Text content -->
+
+                    <div class="w-full lg:w-2/3">
+                        <h1 class="futuristic-text text-3xl md:text-5xl font-bold mb-2">About Me</h1>
+                        <h2 class="text-xl md:text-2xl text-gray-300 mb-6">Let me introduce myself</h2>
+
+                        <p class="text-gray-300 mb-8 text-lg leading-relaxed">
+                            I'm a passionate <span class="highlight"><i class="fas fa-pen icon-accent mr-1"></i>Graphics Designer</span> and
+                            <span class="highlight"><i class="fas fa-lightbulb icon-accent mr-1"></i>creator
+                                </span> with a knack for
+                            solving complex problems through elegant design solutions. With a background in both
+                            <span class="highlight"><i class="fas fa-paint-brush icon-accent mr-1"></i>UI
+                                design</span> and
+                            <span class="highlight"><i class="fas fa-code icon-accent mr-1"></i>front-end
+                                development</span>,
+                            I bridge the gap between aesthetics and functionality to create seamless digital
+                            experiences.
+                        </p>
+
+                        <!-- Stats buttons -->
+                        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                            <div class="glass-button rounded-xl p-4 text-center min-w-[120px] stat-button"
+                                data-target="50">
+                                <div class="text-3xl font-bold mb-1 futuristic-text" id="works-count">0</div>
+                                <div class="text-sm opacity-80"><i class="fas fa-flask mr-1"></i> Works</div>
+                            </div>
+
+                            <div class="glass-button rounded-xl p-4 text-center min-w-[120px] stat-button"
+                                data-target="40">
+                                <div class="text-3xl font-bold mb-1 futuristic-text" id="projects-count">0</div>
+                                <div class="text-sm opacity-80"><i class="fas fa-briefcase mr-1"></i> Projects</div>
+                            </div>
+
+                            <div class="glass-button rounded-xl p-4 text-center min-w-[120px] stat-button"
+                                data-target="20">
+                                <div class="text-3xl font-bold mb-1 futuristic-text" id="clients-count">0</div>
+                                <div class="text-sm opacity-80"><i class="fas fa-smile mr-1"></i> Happy Clients</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of text content -->
+                </div>
+                <!-- End of content layout -->
+            </div>
+            <!-- End of relative z-10 -->
+        </div>
+        <!-- End of main container -->
+    </div>
+    <!-- End of screen container -->
+
+
+    <!--this is a ending about me-->
+
+    <!--this is my skill section start-->
+
+    <section class="skills-section">
+        <div class="flex items-center justify-center p-4">
+            <div class="relative w-full max-w-6xl mx-auto py-20">
+                <!-- Background particles -->
+                <div id="particles-container"></div>
+                <div class="glow-effect glow-left"></div>
+                <div class="glow-effect glow-right"></div>
+                <!-- Main skills container -->
+                <div class="skills-container flex items-center justify-center relative">
+                    <!-- Left skills -->
+                    <div class="left-skills flex flex-col items-end mr-32 space-y-16">
+                        <div class="skill-node text-figma" data-color="#F24E1E">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-figma text-4xl" style="color: #F24E1E;"></i>
+                            </div>
+                            <div class="connector-line left-1 hidden md:block"></div>
+                        </div>
+
+                        <div class="skill-node text-illustrator" data-color="#FF9A00">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-adobe text-4xl" style="color: #FF9A00;"></i>
+                                <span class="absolute text-sm font-bold" style="color: #FF9A00;">AI</span>
+                            </div>
+                            <div class="connector-line left-2 hidden md:block"></div>
+                        </div>
+
+                        <div class="skill-node text-photoshop" data-color="#31A8FF">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-adobe text-4xl" style="color: #31A8FF;"></i>
+                                <span class="absolute text-2xl font-bold" style="color: #31A8FF;">Ps</span>
+                            </div>
+                            <div class="connector-line left-3 hidden md:block"></div>
+                        </div>
+
+                        <div class="skill-node text-indesign" data-color="#FF3366">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-adobe text-4xl" style="color: #FF3366;"></i>
+                                <span class="absolute text-2xl font-bold" style="color: #FF3366;">Id</span>
+                            </div>
+                            <div class="connector-line left-4 hidden md:block"></div>
+                        </div>
+                    </div>
+
+                    <!-- Center button -->
+                    <div class="z-10">
+                        <button
+                            class="glass-card px-8 py-4 rounded-xl text-white font-bold text-xl bg-gradient-to-r from-gray-300 to-gray-800 hover:from-gray-200 hover:to-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            SKILLS
+                        </button>
+                    </div>
+
+                    <!-- Right skills -->
+                    <div class="right-skills flex flex-col items-start ml-32 space-y-16">
+                        <div class="skill-node text-html" data-color="#E34F26">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-html5 text-4xl" style="color: #E34F26;"></i>
+                            </div>
+                            <div class="connector-line right-1 hidden md:block"></div>
+                        </div>
+
+                        <div class="skill-node text-css" data-color="#1572B6">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-css3-alt text-4xl" style="color: #1572B6;"></i>
+                            </div>
+                            <div class="connector-line right-2 hidden md:block"></div>
+                        </div>
+
+                        <div class="skill-node text-bootstrap" data-color="#7952B3">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-bootstrap text-4xl" style="color: #7952B3;"></i>
+                            </div>
+                            <div class="connector-line right-3 hidden md:block"></div>
+                        </div>
+
+                        <div class="skill-node text-js" data-color="#F7DF1E">
+                            <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center glass-card">
+                                <i class="fab fa-js-square text-4xl" style="color: #F7DF1E;"></i>
+                            </div>
+                            <div class="connector-line right-4 hidden md:block"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--this is ending my skill section here-->
+
+
+    <div class="main_container reveal" id="service"></div>
+
+    <!--this is service section of my-->
+    <div class="text-white">
+        <div class="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <!-- Background elements -->
+            <div class="bg-dots"></div>
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+
+            <!-- Section header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 relative inline-block">
+                    <span class="relative z-10">My Development Services</span>
+                    <span
+                        class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full transform translate-y-1"></span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">Specialized solutions tailored to your digital needs
+                    with cutting-edge technologies</p>
+            </div>
+
+            <!-- Services grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Frontend Developer Card -->
+                <div class="service-card rounded-2xl p-8 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-0 hover:opacity-10 transition-opacity duration-300">
+                    </div>
+                    <div class="text-center">
+                        <div class="service-icon">💻</div>
+                        <h3 class="text-xl font-bold mb-4">Frontend Developer</h3>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="feature-item">Creative Design</li>
+                            <li class="feature-item">Interactive Animation</li>
+                            <li class="feature-item">Responsive Design</li>
+                            <li class="feature-item">Basic PHP for backend</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- WordPress Developer Card -->
+                <div class="service-card rounded-2xl p-8 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-purple-500 to-indigo-600 opacity-0 hover:opacity-10 transition-opacity duration-300">
+                    </div>
+                    <div class="text-center">
+                        <div class="service-icon">✒️</div>
+                        <h3 class="text-xl font-bold mb-4">Graphics Designer</h3>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="feature-item">High Quality</li>
+                            <li class="feature-item">3 times Review</li>
+                            <li class="feature-item">Low price</li>
+                            <li class="feature-item">Mockup Ups</li>
+                            <li class="feature-item">Basic PHP</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- UI Designer Card -->
+                <div class="service-card rounded-2xl p-8 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-pink-500 to-purple-600 opacity-0 hover:opacity-10 transition-opacity duration-300">
+                    </div>
+                    <div class="text-center">
+                        <div class="service-icon">🎨</div>
+                        <h3 class="text-xl font-bold mb-4">UI Designer</h3>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="feature-item">Figma</li>
+                            <li class="feature-item">Prototyping</li>
+                            <li class="feature-item">Modern Aesthetics</li>
+                            <li class="feature-item">Interactive Design</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card rounded-2xl p-8 relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-teal-500 to-cyan-600 opacity-0 hover:opacity-10 transition-opacity duration-300">
+                    </div>
+                    <div class="text-center">
+                        <div class="service-icon">🌐</div>
+                        <h3 class="text-xl font-bold mb-4">Web Design</h3>
+                        <ul class="space-y-2 text-gray-300 text-sm">
+                            <li class="feature-item">Theme,fonts</li>
+                            <li class="feature-item">Colors</li>
+                            <li class="feature-item">Performance</li>
+                            <li class="feature-item">Format showcase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Website Creator Card -->
+
+        </div>
+    </div>
+
+
+    <!--this is end of my service section -->
+
+
+
+
+    <!--this is tools start-->
+
+    <div class="container mx-auto px-4 py-12 md:py-20">
+        <div class="glow-effect glow-left"></div>
+        <div class="glow-effect glow-right"></div>
+        <!-- Terminal Section -->
+        <div class="flex flex-col lg:flex-row gap-8 items-center mb-16">
+            <div class="terminal w-full lg:w-1/2">
+                <div class="terminal-header">
+                    <div class="terminal-dot bg-red-500"></div>
+                    <div class="terminal-dot bg-yellow-500"></div>
+                    <div class="terminal-dot bg-green-500"></div>
+                </div>
+                <div class="terminal-content">
+                    <p class="mb-4">
+                        <span class="keyword">Strong foundation</span> in <span class="keyword">HTML</span>, <span
+                            class="keyword">CSS</span>, <span class="keyword">JavaScript</span>, <span
+                            class="keyword">Bootstrap</span>. I also know the basics of <span
+                            class="keyword">MySQL</span>.
+                    </p>
+                    <p class="cyan-text mb-6">
+                        I specialize in web design and have strong experience in graphic design and UI design.
+                    </p>
+                    <button class="cv-button px-6 py-3 rounded-lg font-medium text-white">
+                        Download CV <i class="fas fa-download ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sliding Tools -->
+            <div class="w-full lg:w-1/2 overflow-hidden relative h-32">
+                <div class="absolute top-0 left-0 h-full flex items-center slider whitespace-nowrap">
+                    <div class="inline-flex items-center space-x-8 px-4">
+                        <!-- Duplicate items for seamless looping -->
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                            <span class="text-sm">HTML5</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                            <span class="text-sm">CSS3</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
+                            <span class="text-sm">JavaScript</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-bootstrap text-4xl text-purple-500 mb-2"></i>
+                            <span class="text-sm">Bootstrap</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                            <span class="text-sm">HTML5</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                            <span class="text-sm">CSS3</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
+                            <span class="text-sm">JavaScript</span>
+                        </div>
+                        <div class="tool-card rounded-xl p-4 inline-flex flex-col items-center w-24">
+                            <i class="fab fa-bootstrap text-4xl text-purple-500 mb-2"></i>
+                            <span class="text-sm">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wavy Divider -->
+        <div class="wave-divider relative">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="absolute w-full h-full">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="wave"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="wave"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="wave"></path>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Dark Section with Tools -->
+    <div class="bg-gradient-to-b from-indigo-950 to-violet-950 py-20 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="neon-text text-4xl md:text-5xl font-bold mb-16 text-green-400">Tools</h2>
+
+            <div class="relative w-full overflow-hidden h-40">
+                <div class="absolute top-0 left-0 h-full flex items-center slider whitespace-nowrap">
+                    <div class="inline-flex items-center space-x-8 px-4">
+                        <!--Lightroom- -->
+                        <div
+                            class="tool-bubble w-28 h-28 rounded-2xl flex items-center justify-center photoshop-icon hover:shadow-[var(--glow)]">
+                            <div class="text-center transform hover:scale-110 transition-transform">
+                                <img src="icon/lr.png" alt="Photoshop Logo" class="w-16 h-16 mb-2 mx-auto">
+                                <span class="block text-sm font-bold text-white font-mono">Lightroom</span>
+                            </div>
+                        </div>
+
+
+                        <!--Figma -->
+                        <div
+                            class="tool-bubble w-28 h-28 rounded-2xl flex items-center justify-center photoshop-icon hover:shadow-[var(--glow)]">
+                            <div class="text-center transform hover:scale-110 transition-transform">
+                                <img src="icon/f.png" alt="Photoshop Logo" class="w-16 h-16 mb-2 mx-auto">
+                                <span class="block text-sm font-bold text-white font-mono">Figma</span>
+                            </div>
+                        </div>
+
+                        <!-- Illustrator -->
+                        <div
+                            class="tool-bubble w-28 h-28 rounded-2xl flex items-center justify-center photoshop-icon hover:shadow-[var(--glow)]">
+                            <div class="text-center transform hover:scale-110 transition-transform">
+                                <img src="icon/il.png" alt="Photoshop Logo" class="w-16 h-16 mb-2 mx-auto">
+                                <span class="block text-sm font-bold text-white font-mono">Illustrator</span>
+                            </div>
+                        </div>
+
+                        <!-- Photoshop -->
+                        <div
+                            class="tool-bubble w-28 h-28 rounded-2xl flex items-center justify-center photoshop-icon hover:shadow-[var(--glow)]">
+                            <div class="text-center transform hover:scale-110 transition-transform">
+                                <img src="icon/ps.png" alt="Photoshop Logo" class="w-16 h-16 mb-2 mx-auto">
+                                <span class="block text-sm font-bold text-white font-mono">Photoshop</span>
+                            </div>
+                        </div>
+
+                        <!-- XD -->
+                        <div
+                            class="tool-bubble w-28 h-28 rounded-2xl flex items-center justify-center xd-icon hover:shadow-[var(--glow)]">
+                            <div class="text-center transform hover:scale-110 transition-transform">
+                                <i class="fab fa-xd text-5xl mb-2"></i>
+                                <span class="block text-sm font-bold text-white font-mono">Adobe XD</span>
+                            </div>
+                        </div>
+
+                        <!-- Premiere Pro -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--this is tools ending -->
+
+
+    <!--do you need desing start-->
+    <section>
+        <div class="cursor-glow flex items-center justify-center p-6">
+            <!-- Background elements -->
+            <div class="glow-effect glow-left"></div>
+            <div class="glow-effect glow-right"></div>
+
+            <!-- Particles will be added here by JS -->
+
+            <div class="container mx-auto text-center relative z-10 max-w-4xl">
+                <!-- Small heading -->
+                <h2 class="fade-in text-lg md:text-xl font-light mb-4 text-gray-300">Do you need </h2>
+
+                <!-- Main heading -->
+                <h1
+                    class="fade-in designer-text text-5xl md:text-8xl lg:text-9xl mb-8 md:mb-12 transition-all duration-500">
+                    <span class="inline-block">D</span>
+                    <span class="inline-block">E</span>
+                    <span class="inline-block">S</span>
+                    <span class="inline-block">I</span>
+                    <span class="inline-block">G</span>
+                    <span class="inline-block">N</span>
+                    <span class="inline-block">E</span>
+                    <span class="inline-block">R</span>
+                </h1>
+
+                <!-- Services -->
+                <div class="fade-in services-container grid md:flex justify-center items-center gap-6 mb-12">
+                    <div class="service-item">POSTER DESIGN</div>
+                    <div class="divider hidden md:block">|</div>
+                    <div class="service-item">PACAGE DESIGN</div>
+                    <div class="divider hidden md:block">|</div>
+                    <div class="service-item">FLYER DESIGN</div>
+                    <div class="divider hidden md:block">|</div>
+                    <div class="service-item">WEB DESIGN</div>
+                </div>
+
+                <!-- CTA Button -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--do you need desig ending -->
+
+    <!--this is animation 3 design start and name csss is design.css-->
+    <div class="main_container reveal" id="works"></div>
+
+    <section class="portfolio-section">
+        <h1><span>Poster</span> Design</h1><br>
+        <div class="glow-effect glow-left"></div>
+        <div class="glow-effect glow-right"></div>
+
+        <!-- From Uiverse.io by dalbrechtmartin -->
+        <div class="book">
+            <p class="text"></p>
+            <img src="image/poster/6.jpg" alt="Image 1" class="image">
+
+            <div class="inner">
+                <p class="text"></p>
+                <img src="image/poster/3.jpg" alt="Image 2" class="image">
+            </div>
+
+            <div class="cover">
+                <p class="text"></p>
+                <img src="image/poster/1.jpg" alt="Image 3" class="image">
+            </div>
+        </div>
+
+    </section>
+    <!--this is ending of design.css page design-->
+
+    <!--this is my flayer design start here-->
+    <!-- Flyer Grid -->
+    <div
+        class="min-h-screen flex flex-col bg-gradient-to-b from-[#0b0226] via-[#1a0538] to-[#17072f] text-white font-sans">
+        <!-- Header -->
+        <header class="py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Flyer <span class="text-[#ccff00]">Portfolio</span></h1>
+            <p class="max-w-2xl mx-auto text-lg opacity-80">
+                Showcasing professional flyer designs with a modern aesthetic. Perfect for events, promotions, and
+                marketing campaigns.
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow px-4 sm:px-6 lg:px-8 pb-12">
+            <!-- Flyer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                <!-- A5 Flyer -->
+                <div onclick="openModal('A5 Flyer', 'https://via.placeholder.com/800x1131')"
+                    class="bg-gradient-to-br from-[#1a0538] to-[#0b0226] rounded-xl overflow-hidden border border-[#ccff0033] cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <div class="aspect-[148/210] overflow-hidden">
+                        <img src="image/flyer/new fluerrererwerwt.jpg" alt="A5 Flyer"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-[#ccff00]">A5 Flyer</h3>
+                        <p class="text-sm opacity-70">Size: 148 × 210 mm</p>
+                    </div>
+                </div>
+
+                <!-- A4 Flyer -->
+                <div onclick="openModal('A4 Flyer', 'https://via.placeholder.com/800x1131')"
+                    class="bg-gradient-to-br from-[#1a0538] to-[#0b0226] rounded-xl overflow-hidden border border-[#ccff0033] cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <div class="aspect-[210/297] overflow-hidden">
+                        <img src="image/flyer/flayer1.jpg" alt="A4 Flyer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-[#ccff00]">A4 Flyer</h3>
+                        <p class="text-sm opacity-70">Size: 210 × 297 mm</p>
+                    </div>
+                </div>
+
+                <!-- Digital Flyer (4:5) -->
+                <div onclick="openModal('A4 Flyer', 'https://via.placeholder.com/800x1131')"
+                    class="bg-gradient-to-br from-[#1a0538] to-[#0b0226] rounded-xl overflow-hidden border border-[#ccff0033] cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <div class="aspect-[210/297] overflow-hidden">
+                        <img src="image/flyer/flyeererer.jpg" alt="A4 Flyer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-[#ccff00]">A4 Flyer</h3>
+                        <p class="text-sm opacity-70">Size: 210 × 297 mm</p>
+                    </div>
+                </div>
+
+                <div onclick="openModal('A4 Flyer', 'https://via.placeholder.com/800x1131')"
+                    class="bg-gradient-to-br from-[#1a0538] to-[#0b0226] rounded-xl overflow-hidden border border-[#ccff0033] cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <div class="aspect-[210/297] overflow-hidden">
+                        <img src="image/flyer/flayer1.jpg" alt="A4 Flyer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-[#ccff00]">A4 Flyer</h3>
+                        <p class="text-sm opacity-70">Size: 210 × 297 mm</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Modal -->
+        <div id="modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black/70">
+            <div
+                class="bg-gradient-to-br from-[#1a0538] to-[#0b0226] rounded-xl max-w-4xl w-full mx-4 p-6 border border-[#ccff0033]">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 id="modal-title" class="text-2xl font-bold text-[#ccff00]"></h3>
+                    <button onclick="closeModal()" class="text-white hover:text-[#ccff00] text-2xl">&times;</button>
+                </div>
+                <div
+                    class="aspect-[4/5] overflow-auto bg-black bg-opacity-30 rounded-lg flex items-center justify-center">
+                    <img id="modal-image" src="" alt="" class="max-w-full max-h-[70vh] object-contain">
+                </div>
+                <div class="mt-4 flex justify-end">
+                    <button
+                        class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-2 rounded-lg font-medium"
+                        onclick="downloadCurrentFlyer()">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+    </div>
+
+    <!--end here flyer -->
+
+    <!--this is my design with mockup full pagee section and css name is more design.css-->
+
+    <!-- Portfolio Grid Section -->
+    <section class="py-20 px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900">UI work</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Mockup -->
+                <div class="bg-gray-100 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div
+                        class="aspect-square bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                        <img src="image/packaging/ui.jpg" alt="Product Mockup"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 text-gray-900">screen UI </h3>
+                </div>
+
+                <!-- Typography Tile -->
+                <div
+                    class="bg-gray-900 rounded-3xl p-8 flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="text-3xl font-bold text-center text-white tracking-wider">Mobile screen UI Design</h3>
+                </div>
+
+                <!-- Mobile UI Preview -->
+                <div class="bg-gray-50 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div class="relative mx-auto" style="width: 250px; height: 500px;">
+                        <div class="absolute inset-0 bg-black rounded-[40px] p-2">
+                            <div class="h-full w-full bg-white rounded-[32px] overflow-hidden">
+                                <img src="image/packaging/Main screen (1).png" alt="Mobile App"
+                                    class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="bg-gray-100 rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <div
+                        class="aspect-square bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                        <img src="image/packaging/ui 2.png" alt="Product Mockup"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="text-xl font-bold mt-4 text-gray-900">Design works</h3>
+                </div>
+
+                <!-- Promotional Banner -->
+                <div
+                    class="bg-gradient-to-r from-purple-600 to-blue-500 rounded-3xl p-8 flex items-center justify-center shadow-xl hover:shadow-2xl transition-shadow duration-300 md:col-span-2">
+                    <h3 class="text-2xl md:text-3xl font-bold text-center text-white">Just try to make UI
+                    </h3>       
+                </div>
+
+                <!-- Product Line -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--this is my design full section cover with design in scroll end and this is css is more design.css -->
+    <div class="main_container reveal" id="designs"></div>
+    <section class="portfolio-section">
+        <div class="glow-effect glow-left"></div>
+        <div class="glow-effect glow-right"></div>
+        <h1><span>creative</span> works</h1>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="logo">Logo Design</button>
+            <button class="filter-btn" data-category="thumbnail">Thumbnail</button>
+            <button class="filter-btn" data-category="c.thumbnail">Cover Thumbnail</button>
+            <button class="filter-btn" data-category="social">Social Media Post</button>
+            <button class="filter-btn" data-category="poster">Poster</button>
+            <button class="filter-btn" data-category="web">Web Design</button>
+            <button class="filter-btn" data-category="intro">Intro Animation</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Sample Cards -->
+            <!--This is logo design -->
+            <div class="card" data-category="logo"><img src="image/logo/1.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/2.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/3.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/4.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/5.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/6.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/7.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/8.jpg" />
+                <p></p>
+            </div>
+             <div class="card" data-category="logo"><img src="image/logo/9.png" />
+                <p></p>
+            </div>
+             <div class="card" data-category="logo"><img src="image/logo/10.png" />
+                <p></p>
+            </div>
+             <div class="card" data-category="logo"><img src="image/logo/11.png" />
+                <p></p>
+            </div>
+             <div class="card" data-category="logo"><img src="image/logo/12.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/13.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/14.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="logo"><img src="image/logo/15.jpg" />
+                <p></p>
+            </div>
+            
+
+            <!--This is thumbanil design only -->
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/1.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/2.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/3.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/4.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/5.jpeg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/6.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/7.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/7.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/8.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/9.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/10.jpg" />
+                <p>Thumbnail</p>
+            </div>
+            <div class="card" data-category="thumbnail"><img src="image/thumbnail/11.jpeg" />
+                <p>Thumbnail</p>
+            </div>
+
+
+            <!--THis is cover thumbanil design only-->
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/1.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/2.jpeg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/3.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/4.jpeg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/5.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/6.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/7.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/8.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+            <div class="card" data-category="c.thumbnail"><img src="image/cover thumbnail/9.jpg" />
+                <p>cover thumbnail</p>
+            </div>
+
+            <!--This is Social Media Post design only -->
+
+            <div class="card" data-category="social"><img src="image/social media post/post 1.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 2.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 11.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 12.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 4.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 13.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 14.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 15.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 7.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 16.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 17.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/post 18.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/0.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/11.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/22.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/33.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/44.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/55.png" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/66.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/77.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/88.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/99.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/00.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/000.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/0000.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/111.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/222.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/555.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/666.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/777.jpg" />
+                <p></p>
+            </div>
+            <div class="card" data-category="social"><img src="image/social media post/888.jpg" />
+                <p></p>
+            </div>
+
+            <div class="card" data-category="social"><img src="image/social media post/999.jpg" />
+                <p></p>
+            </div>
+             <div class="card" data-category="social"><img src="image/social media post/hey.jpg" />
+                <p></p>
+            </div>
+             <div class="card" data-category="social"><img src="image/social media post/social media mockup avifgefg.jpg" />
+                <p></p>
+            </div>
+
+
+            <!--This is a poster design only-->
+            <div class="card" data-category="poster"><img src="image/poster/1.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/2.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/3.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/4.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/5.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/6.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/7.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/8.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/9.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/BasketBall Flbjhvjh.jpg" />
+                <p>Poster</p>
+            </div>
+            <div class="card" data-category="poster"><img src="image/poster/singer post show.jpg" />
+                <p>Poster</p>
+            </div>
+
+            <!--This is web design only-->
+            <div class="card" data-category="web"><img src="image/web design/1.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/4.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/6.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/2.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/12.png" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/3.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/7.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/8.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/9.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/10.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/11.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/15.png" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/13.jpg" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/12.png" />
+                <p>Web Design</p>
+            </div>
+            <div class="card" data-category="web"><img src="image/web design/5.jpg" />
+                <p>Web Design</p>
+            </div>
+
+
+
+            <!--This is for intro animation video-->
+            <div class="portfolio-item intro-animation">
+                <video class="portfolio-video">
+                    <source src="image/intro/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="play-sound">Play with Sound</button>
+                <h3>Intro Animation 1</h3>
+            </div>
+
+
+            <div class="portfolio-item intro-animation">
+                <video class="portfolio-video">
+                    <source src="image/intro/2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="play-sound">Play with Sound</button>
+                <h3>Intro Animation 1</h3>
+            </div>
+
+            <div class="portfolio-item intro-animation">
+                <video class="portfolio-video">
+                    <source src="image/intro/3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="play-sound">Play with Sound</button>
+                <h3>Intro Animation 2</h3>
+            </div>
+
+            <div class="portfolio-item intro-animation">
+                <video class="portfolio-video">
+                    <source src="image/intro/4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button class="play-sound">Play with Sound</button>
+                <h3>Intro Animation 3</h3>
+            </div>
+
+
+            <!--this is more design works add-->
+            <!-- Hero Section -->
+
+
+
+
+            <!--This is design page for do you need design title -->
+
+
+            <!--this is ending of do you need designers -->
+            <!-- Portfolio Section -->
+
+            <script>
+                const buttons = document.querySelectorAll('.play-sound');
+
+                buttons.forEach((button) => {
+                    button.addEventListener('click', () => {
+                        const video = button.previousElementSibling; // Select the video above button
+
+                        // Pause all other videos
+                        document.querySelectorAll('.portfolio-video').forEach((v) => {
+                            if (v !== video) {
+                                v.pause();
+                                v.currentTime = 0; // Reset others to start
+                            }
+                        });
+
+                        // Play selected video with sound
+                        video.muted = false;
+                        video.play();
+                    });
+                });
+
+
+            </script>
+        </div>
+    </section>
+
+    <!-- Add more here -->
+
+    <!--Cube animation-->
+
+
+
+    <!--contect us start-->
+   <div class="main_container reveal" id="contact_me"></div>
+<div class="bg-gray-900 text-white font-poppins">
+    <section class="py-16 px-4 md:px-8 lg:px-16">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="gradient-text text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 font-orbitron">
+                CONTACT US
+            </h2>
+            <p class="text-center text-gray-300 mb-12 text-lg">
+                Feel free to connect for work, ideas, or just a hello 👋
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left Column - Contact Form -->
+                <div class="glass-container rounded-2xl p-8">
+                    <form id="contactForm" action="contact.php" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-1">First Name</label>
+                                <input type="text" id="firstName" name="first_name" class="input-field w-full px-4 py-3 rounded-lg" required>
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-1">Last Name</label>
+                                <input type="text" id="lastName" name="last_name" class="input-field w-full px-4 py-3 rounded-lg" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email Address</label>
+                            <input type="email" id="email" name="email" class="input-field w-full px-4 py-3 rounded-lg" required>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="input-field w-full px-4 py-3 rounded-lg" required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="neon-button w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-6 rounded-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Column - PNG Image -->
+                <div class="glass-container rounded-2xl p-4 flex items-center justify-center">
+                    <img src="image/portfolio avi.png" alt="Avi Design" class="max-w-full h-auto object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+
+    <!--this is ending of my contact us section-->
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_element">
+                <h4>Get in touch</h4>
+                <span>aryalavih@gmail.com</span>
+            </div>
+            <div class="footer_element">
+                <h4>Social</h4>
+                <span><a href="https://www.facebook.com/avi.a.chhetri.11"><i class="fa-brands fa-facebook"></i>
+                        Facebook</a></span>
+                <span><a href="https://www.instagram.com/avidesign111/"><i class="fa-brands fa-instagram"></i>
+                        Instagram</a></span>
+                <span><a href="https://www.linkedin.com/in/aviaryal111/"><i class="fa-brands fa-linkedin"></i>
+                        Linkedin</a></span>
+            </div>
+            <div class="footer_element">
+                <h4>Location</h4>
+                <span>tilottama -03, Shankharnagar, Butwal, Nepal.</span>
+            </div>
+        </div>
+        <div class="footer_element">
+            <span class="copyright"><em>©2023 avi graphics designer</em></span>
+        </div>
+    </footer>
+</body>
+<script src="https://valeriusec.github.io/Project_Portfolio/JS/mobile.js"></script>
+<script type="module">
+    import createGlobe from 'https://cdn.skypack.dev/cobe'
+
+    let phi = 0
+    let canvas = document.getElementById("cobe")
+
+    const globe = createGlobe(canvas, {
+        devicePixelRatio: 1,
+        width: 350,
+        height: 350,
+        phi: 0,
+        theta: 0.7,
+        dark: 1,
+        diffuse: 1,
+        scale: 1,
+        mapSamples: 26000,
+        mapBrightness: 8,
+        baseColor: [1, 1, 1],
+        markerColor: [255, 0, 0],
+        glowColor: [1, 1, 1],
+        offset: [0, 0],
+        markers: [
+            { location: [45.4317, 10.9859], size: 0.04 },
+        ],
+        onRender: (state) => {
+            // Called on every animation frame.
+            // `state` will be an empty object, return updated params.
+            state.phi = phi
+            phi += 0.008
+        },
+    })
+</script>
+<script src="animation.js"></script>
+<script src="work.js"></script>
+
+</html>

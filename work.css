@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0a0a23, #1f1f3b);
+  color: #fff;
+}
+
+.portfolio-section h1{
+  font-size: 2.5rem;
+}
+.portfolio-section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 span {
+  color: #a64bf4;
+}
+
+.filter-buttons {
+  margin: 30px 0;
+}
+
+.filter-btn {
+  background: #2a2a44;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 10px 16px;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #a64bf4;
+  color: #fff;
+  box-shadow: 0 0 10px #a64bf4aa;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.card {
+  background: #1e1e2e;
+  border-radius: 12px;
+  padding: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #a64bf499;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  font-weight: 500;
+}

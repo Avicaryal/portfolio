@@ -1,0 +1,161 @@
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        
+        .terminal {
+            background-color: #0b001d;
+            box-shadow: 0 0 15px rgba(46, 255, 185, 0.3);
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .terminal-header {
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+        }
+        
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        .glow-left {
+            background: #3b82f6;
+            left: -100px;
+            top: -100px;
+        }
+        
+        .glow-right {
+            background: #9333ea;
+            right: -100px;
+            bottom: -100px;
+        }
+        
+        .terminal-content {
+            padding: 20px;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .keyword {
+            color: #f472b6;
+            font-weight: 500;
+        }
+        
+        .cyan-text {
+            color: #06b6d4;
+        }
+        
+        .cv-button {
+            background: linear-gradient(135deg, #10b981 0%, #84cc16 100%);
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .cv-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+        }
+        
+        .tool-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slider {
+            animation: slide 8s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .tool-bubble {
+            filter: drop-shadow(0 0 12px currentColor);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .tool-bubble:hover {
+            transform: scale(1.1) rotateY(10deg) translateY(-8px);
+            filter: drop-shadow(0 0 20px currentColor);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .photoshop-icon { color: #31a8ff; --glow: 0 0 20px rgba(49, 168, 255, 0.7); }
+        .illustrator-icon { color: #ff9a00; --glow: 0 0 20px rgba(255, 154, 0, 0.7); }
+        .figma-icon { color: #a259ff; --glow: 0 0 20px rgba(162, 89, 255, 0.7); }
+        .lightroom-icon { color: #8fb8ff; --glow: 0 0 20px rgba(143, 184, 255, 0.7); }
+        .xd-icon { color: #ff61f6; --glow: 0 0 20px rgba(255, 97, 246, 0.7); }
+        .premiere-icon { color: #ea77ff; --glow: 0 0 20px rgba(234, 119, 255, 0.7); }
+        
+        .wave-divider {
+            height: 100px;
+            overflow: hidden;
+        }
+        
+        .wave {
+            fill: #1e1b4b;
+        }
+        
+        .tool-bubble {
+            background: rgba(46, 255, 185, 0.1);
+            border: 1px solid rgba(46, 255, 185, 0.3);
+            box-shadow: 0 0 15px rgba(46, 255, 185, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .slider {
+            animation: slide 15s linear infinite;
+            will-change: transform;
+        }
+        
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        @media (prefers-reduced-motion) {
+            .slider {
+                animation: none;
+            }
+        }
+        
+        .tool-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(46, 255, 185, 0.5);
+        }
+        
+        .neon-text {
+            text-shadow: 0 0 5px #84cc16, 0 0 10px #84cc16;
+        }

@@ -1,0 +1,41 @@
+/* 📱 Mobile responsive fix for portfolio pages (not home) */
+@media (max-width: 768px) {
+    /* grid ko 1 column karo */
+    .portfolio-grid,
+    .services,
+    .projects,
+    .design-gallery,
+    .work-section {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+        justify-items: center;
+    }
+
+    /* card ka size full width rakho */
+    .portfolio-card,
+    .service-card,
+    .project-card,
+    .design-card,
+    .work-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* container padding fix for mobile */
+    .container,
+    .content-wrapper {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin: 0 auto !important;
+    }
+
+    /* image responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+}
+
